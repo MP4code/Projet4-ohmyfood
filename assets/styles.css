@@ -1,0 +1,10 @@
+/**Général**/
+* {
+    font-family: "Roboto", sans-serif;
+}
+:root {
+    --main-color: #9356DC;
+    --secondary-color: #FF79DA;
+    --accent-color: #99E2D0;
+    
+}
