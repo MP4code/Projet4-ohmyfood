@@ -2,9 +2,180 @@
 * {
     font-family: "Roboto", sans-serif;
 }
+
 :root {
     --main-color: #9356DC;
     --secondary-color: #FF79DA;
     --accent-color: #99E2D0;
-    
+    --filter-color: #F6F6F6;
+    --detail-color: #7E7E7E;
+}
+
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.main-container {
+    max-width: 375px;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+.btn {
+    border: none;
+    color: white;
+    text-align: center;
+    border-radius: 25px;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    padding: 19px;
+    background: linear-gradient(var(--secondary-color) -11.44%, var(--main-color) 123.93%);
+    /* Shadow/Button */
+    box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+}
+
+.section_title {
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.fa-solid {
+    color: var(--detail-color);
+    width: 16px;
+}
+
+/**Header**/
+
+.hearder {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 14px 0 14px;
+
+}
+
+.hearder_logo {
+    width: 197px;
+    height: 36px;
+    padding: 14px 19px 0px 16px;
+    gap: 10px;
+
+}
+
+/**navigation**/
+
+.nav {
+    width: 100%;
+    text-align: center;
+}
+
+.nav_location {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.20) 0%, rgba(0, 0, 0, 0.20) 100%);
+}
+
+
+.nav_location p {
+    text-align: center;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.nav_nosrestaurants {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: var(--filter-color);
+    box-sizing: border-box;
+    padding: 30px;
+
+}
+
+.nav_nosrestaurants h1 {
+    font-size: 24px;
+    font-weight: 700;
+
+}
+
+.nav_nosrestaurants p {
+    font-family: "Roboto";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+
+}
+
+/**Fonctionnement de l'application**/
+.Section_fonction {
+    width: 100%;
+    padding: 0 20px;
+    box-sizing: border-box;
+    border: 2px solid orange;
+}
+
+/*Les propriétés qui revient souvent*/
+.Section_fonction-content p:first-child {
+    font-size: 14px;
+    color: white;
+    text-align: center;
+
+}
+
+.rounded-container {
+    position: absolute;
+    left: -10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.rounded {
+    border: 2px solid salmon;
+    height: 20px;
+    width: 20px;
+    border-radius: 24px;
+    background-color: var(--main-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+
+
+.Section_fonction-content {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid violet;
+}
+
+.Section_fonction-content-choice {
+    background-color: yellow;
+    margin-left: 10px;
+    margin-bottom: 20px;
+    position: relative;
+    width: calc(100% - 10px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 24px;
+
 }
