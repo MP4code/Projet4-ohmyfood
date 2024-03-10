@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Ohmyfood La palette du goût</title>
-    <link rel="stylesheet" href="./assets/styles.css" />
+    <link rel="stylesheet" href="../assets/styles.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -29,16 +29,52 @@
   <body>
     <div class="main-container">
       <header>
-        <div class="hearder">
+        <div class="header_container">
+          <a href="index.html" class="header_container-link">
+            <button type="button" class="btn_return">
+              <i class="fa-solid fa-arrow-left fa-xl"></i>
+            </button>
+          </a>
           <img
-            class="hearder_logo"
-            src="./assets/images/logo/ohmyfood.png"
+            class="header_logo"
+            src="../assets/images/logo/ohmyfood.png"
             alt="Logo ohmyfood"
           />
         </div>
       </header>
-
-      <h1 class="test">text</h1>
+      <div class="menu_container-img"></div>
+      <section class="menu_container">
+        <div class="menu_content">
+          <h1 class="menu_content-title">La palette du goût</h1>
+          <div class="menu_content-entrees">
+            <h2 class="section_title-menu">Entrées</h2>
+            <div class="menu_content-card">
+              <div class="menu_content-card-title">
+                <h2 class="menu_content-name">Fricassée d'escargots</h2>
+                <p>Au piment d'Espelette</p>
+              </div>
+              <h3>25€</h3>
+            </div>
+          </div>
+        </div>
+      </section>
+      <footer class="footer_container">
+        <div class="footer_content">
+          <h2>ohmyfood</h2>
+          <ul>
+            <li>
+              <i class="fa-solid fa-utensils"></i
+              ><a href="#">Proposer un restaurant</a>
+            </li>
+            <li>
+              <i class="fa-solid fa-handshake-angle"></i
+              ><a href="#">Devenir partenaire</a>
+            </li>
+            <li><a href="#">Mentions légales</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div>
+      </footer>
     </div>
   </body>
 </html>

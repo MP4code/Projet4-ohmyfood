@@ -7,13 +7,15 @@
     --main-color: #9356DC;
     --secondary-color: #FF79DA;
     --accent-color: #99E2D0;
+    --green-font-color: #008766;
     --filter-color: #F6F6F6;
     --detail-color: #7E7E7E;
+    --footer-color: #353535;
 }
 
 
 body {
-    margin: 0;
+    margin: 0 auto;
     padding: 0;
 }
 
@@ -36,6 +38,7 @@ body {
     background: linear-gradient(var(--secondary-color) -11.44%, var(--main-color) 123.93%);
     /* Shadow/Button */
     box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+    cursor: pointer;
 }
 
 .section_title {
@@ -45,14 +48,40 @@ body {
     line-height: normal;
 }
 
+.section_title-card {
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin: 0;
+}
+
 .fa-solid {
     color: var(--detail-color);
     width: 16px;
 }
 
+a {
+    text-decoration: none;
+}
+
+
+/*titre - Les noms des restaurants*/
+.menu_content-title {
+
+    font-family: Shrikhand;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-bottom: 0;
+}
+
+
+/***********ACCUEIL**********/
 /**Header**/
 
-.hearder {
+.header {
     width: 100%;
     display: flex;
     align-items: center;
@@ -61,7 +90,7 @@ body {
 
 }
 
-.hearder_logo {
+.header_logo {
     width: 197px;
     height: 36px;
     padding: 14px 19px 0px 16px;
@@ -82,6 +111,7 @@ body {
     justify-content: center;
     align-items: center;
     background: linear-gradient(0deg, rgba(0, 0, 0, 0.20) 0%, rgba(0, 0, 0, 0.20) 100%);
+    gap: 18px;
 }
 
 
@@ -122,9 +152,8 @@ body {
 /**Fonctionnement de l'application**/
 .Section_fonction {
     width: 100%;
-    padding: 0 20px;
     box-sizing: border-box;
-    border: 2px solid orange;
+    margin: 48px 0 68px;
 }
 
 /*Les propriétés qui revient souvent*/
@@ -132,6 +161,13 @@ body {
     font-size: 14px;
     color: white;
     text-align: center;
+
+}
+
+.Section_fonction-content-choice p {
+    font-weight: 500;
+    font-size: 16px;
+    font-style: normal;
 
 }
 
@@ -144,7 +180,6 @@ body {
 }
 
 .rounded {
-    border: 2px solid salmon;
     height: 20px;
     width: 20px;
     border-radius: 24px;
@@ -155,27 +190,276 @@ body {
 
 }
 
-
+.Section_fonction-container {
+    padding: 0 20px;
+}
 
 .Section_fonction-content {
     width: 100%;
-
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    border: 2px solid violet;
+    box-sizing: border-box;
 }
 
+
 .Section_fonction-content-choice {
-    background-color: yellow;
+    background-color: var(--filter-color);
     margin-left: 10px;
     margin-bottom: 20px;
+    padding: 0 20px;
     position: relative;
     width: calc(100% - 10px);
     display: flex;
     align-items: center;
     justify-content: center;
     border-radius: 24px;
+    text-align: center;
+    box-sizing: border-box;
+    /*box shadow*/
+    box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
 
+}
+
+.Section_fonction-content-choice .fa-solid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-right: 20px;
+}
+
+.Section_fonction-content-choice .fa-solid[name="fa-store"] {
+    color: var(--main-color);
+}
+
+/*La partie restaurants*/
+.section_restaurants {
+    width: 100%;
+    padding: 50px 20px;
+    box-sizing: border-box;
+    background-color: var(--filter-color);
+}
+
+.section_restaurants-content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 18px;
+    box-sizing: border-box;
+    border: 2px solid pink;
+}
+
+.section_restaurants_Card {
+    cursor: pointer;
+    width: 100%;
+    background-color: white;
+    box-sizing: border-box;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+    border: 2px solid green;
+}
+
+.section_restaurants_Card img {
+    object-fit: cover;
+    height: 230px;
+    border-radius: 15px 15px 0 0;
+}
+
+.section_restaurants_card-info {
+    display: flex;
+    color: black;
+    justify-content: space-between;
+    padding: 13px;
+    border: 2px solid yellow;
+}
+
+.section_restaurants_Card p {
+    margin: 0;
+}
+
+/*Bouton nouveau dans la partie restaurants*/
+.btn_container {
+    position: absolute;
+    display: flex;
+    justify-content: flex-end;
+
+}
+
+.btn_new {
+    border: none;
+    background-color: var(--accent-color);
+    color: var(--green-font-color);
+    width: 80px;
+    height: 29px;
+}
+
+/*Les boutons like dans la partie restaurants*/
+#btn_like {
+    border: none;
+    background-color: white;
+    cursor: pointer;
+}
+
+#btn_like i:default {
+    color: #9356DC;
+}
+
+
+/*Footer*/
+.footer_container {
+    background-color: var(--footer-color);
+}
+
+.footer_content {
+    padding: 22px 25px;
+}
+
+.footer_content h2 {
+    color: white;
+    font-family: Shrikhand;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.footer_content ul {
+    margin: 0;
+    padding: 0;
+}
+
+.footer_content ul li {
+    list-style: none;
+}
+
+.footer_content ul li a {
+    color: white;
+    text-decoration: none;
+    line-height: normal;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    line-height: 2em;
+}
+
+/*couleur des icones*/
+.footer_content .fa-solid {
+    color: white;
+    padding-right: 10px;
+}
+
+/***********FIN**ACCUEIL**********/
+
+/** Page du restaurant la Palette du Goût **/
+
+/*Bouton pour retourner à la page d'accueil*/
+.btn_return {
+    border: none;
+    background-color: white;
+    cursor: pointer;
+
+
+}
+
+.btn_return .fa-solid {
+    color: black;
+}
+
+.header_container {
+    display: flex;
+    justify-self: baseline;
+    gap: 42px;
+    height: 63px;
+}
+
+.header_container-link {
+    display: flex;
+}
+
+/*Imge de fond du site */
+
+
+.menu_container-img {
+    background-image: url("../assets/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg");
+    background-size: cover;
+    width: 100%;
+    height: 275px;
+    box-sizing: border-box;
+}
+
+/*La partie menu*/
+.menu_container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    border: 2px solid green;
+}
+
+.menu_content {
+    background-color: var(--filter-color);
+    border-radius: 24px 24px 0 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    gap: 40px;
+    border: 2px solid red;
+}
+
+/*titres (Entrées,Plats,desserts)*/
+
+.section_title-menu {
+    font-family: Roboto;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    text-transform: uppercase;
+    border-bottom: 3px solid var(--accent-color);
+    padding: 5px 0;
+    width: 40px;
+}
+
+/*Nom des (Entrées,Plats,desserts)*/
+.menu_content-name {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-family: Roboto;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    margin-bottom: 0;
+}
+
+.menu_content-card-title p {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-family: Roboto;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    margin-top: 0;
+}
+
+/*card*/
+.menu_content-card {
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+    padding: 15px;
+    border-radius: 15.043px;
+    gap: 5px;
+    border: 2px solid orange;
 }
