@@ -394,11 +394,36 @@ a {
     box-sizing: border-box;
 }
 
+/*La partie restaurant favoris(bouton like)*/
+.menu_content-like {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-content: space-between;
+}
+
+.btn_like-restaurant {
+    border: none;
+    background-color: var(--filter-color);
+}
+
+/*faire disparaitre et apparaitre le coeur*/
+.btn_like-color:default {
+    display: none;
+}
+
+.btn_like-color i {
+    /*Couleur dégradé*/
+    color: linear-gradient(var(--main-color) var(--secondary-color));
+
+}
+
 /*La partie menu*/
 .menu_container {
     width: 100%;
     display: flex;
     flex-direction: column;
+    box-sizing: border-box;
     border: 2px solid green;
 }
 
@@ -410,8 +435,58 @@ a {
     justify-content: center;
     align-items: center;
     box-sizing: border-box;
+    width: 100%;
     gap: 40px;
+    padding: 15px;
     border: 2px solid red;
+}
+
+/*card*/
+.menu_content-card {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    justify-content: space-between;
+    background-color: white;
+    width: 100%;
+    padding: 15px;
+    border-radius: 15px;
+    gap: 5px;
+    box-sizing: border-box;
+    /*box shadow*/
+    box-shadow: 0px 4.011px 15.043px 0px rgba(0, 0, 0, 0.10);
+    border: 2px solid orange;
+}
+
+/*Entrees*/
+.menu_content-entrees {
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    border: 2px solid yellow;
+}
+
+/*Plats*/
+.menu_content-plats {
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    border: 2px solid yellow;
+}
+
+/*Desserts*/
+.menu_content-desserts {
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    border: 2px solid yellow;
+
 }
 
 /*titres (Entrées,Plats,desserts)*/
@@ -425,6 +500,8 @@ a {
     text-transform: uppercase;
     border-bottom: 3px solid var(--accent-color);
     padding: 5px 0;
+    margin-top: 0;
+    margin-bottom: 5px;
     width: 40px;
 }
 
@@ -438,7 +515,11 @@ a {
     font-style: normal;
     font-weight: 500;
     line-height: normal;
-    margin-bottom: 0;
+    margin-bottom: 5px;
+}
+
+.menu_content-card-title {
+    border: 2px solid rebeccapurple;
 }
 
 .menu_content-card-title p {
@@ -446,20 +527,24 @@ a {
     text-overflow: ellipsis;
     white-space: nowrap;
     font-family: Roboto;
-    font-size: 16px;
+    font-size: 15px;
     font-style: normal;
     font-weight: 300;
     line-height: normal;
-    margin-top: 0;
+    margin: 0;
 }
 
-/*card*/
-.menu_content-card {
+/*Le prix*/
+.menu_content h3 {
+    margin: 0;
+}
+
+/*Le bouton commander*/
+.btn_commander {
     display: flex;
-    justify-content: space-between;
-    background-color: white;
-    padding: 15px;
-    border-radius: 15.043px;
-    gap: 5px;
-    border: 2px solid orange;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 0;
+    border: 2px solid palevioletred;
 }
