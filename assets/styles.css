@@ -282,7 +282,7 @@ a {
 
 /** fin Footer **/
 /***********FIN**ACCUEIL**********/
-/** Page du restaurant la Palette du Goût **/
+/***** PAGE RESTAURANTS  *****/
 /*Bouton pour retourner à la page d'accueil*/
 .header_container-link .btn_return {
   border: none;
@@ -304,9 +304,29 @@ a {
   display: flex;
 }
 
-/*Imge de fond du site */
+/*** Image de fond du site ***/
+/*image du restaurant la palette du gout*/
 .menu_container-img {
   background-image: url("../assets/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg");
+  background-size: contain;
+  box-sizing: border-box;
+  /*image du restaurant la note enchantée*/
+  /*image du restaurant A la française*/
+  /*image du restaurant Le délice des sens*/
+}
+.menu_container-img-1 {
+  background-image: url("../assets/images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg");
+  background-size: contain;
+  background-position: center;
+  box-sizing: border-box;
+}
+.menu_container-img-2 {
+  background-image: url("../assets/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg");
+  background-size: contain;
+  box-sizing: border-box;
+}
+.menu_container-img-3 {
+  background-image: url("../assets/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg");
   background-size: contain;
   box-sizing: border-box;
 }
