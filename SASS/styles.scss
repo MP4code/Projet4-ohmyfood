@@ -22,7 +22,26 @@ body {
     max-width: 375px;
     margin: 0 auto;
     box-sizing: border-box;
+    z-index: 1;
 }
+
+.main-content {
+    max-width: 375px;
+    margin: 0 auto;
+    animation-name: forAnimation;
+    animation-duration: 8s;
+}
+
+@keyframes forAnimation {
+    0% {
+        position: relative;
+    }
+
+    100% {
+        position: absolute;
+    }
+}
+
 
 .btn {
     border: none;
@@ -42,7 +61,7 @@ body {
 
 .btn:hover {
     transition: 1s;
-    opacity: 0.8;
+    opacity: 0.6;
 }
 
 .section_title {
@@ -57,6 +76,107 @@ a {
 }
 
 /***********ACCUEIL**********/
+
+/**loader**/
+
+.loader_container {
+    position: absolute;
+    z-index: 2;
+    max-width: 375px;
+    margin: 0 auto;
+    width: 100%;
+    height: 100%;
+    animation-duration: 8s;
+    animation-name: loader_background;
+}
+
+/*animation de fond*/
+@keyframes loader_background {
+    from {
+        position: absolute;
+        background: linear-gradient(var(--secondary-color) -11.44%, var(--main-color) 123.93%);
+        opacity: 1;
+    }
+
+    20% {
+        position: absolute;
+        background: linear-gradient(var(--secondary-color) -11.44%, var(--main-color) 123.93%);
+        opacity: 1;
+
+    }
+
+    to {
+        background: linear-gradient(var(--secondary-color) -11.44%, var(--main-color) 123.93%);
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+#loader_element-img {
+    width: 197px;
+    height: 36px;
+}
+
+
+.loader {
+    width: 15px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    animation: l5 1s infinite linear alternate;
+}
+
+@keyframes l5 {
+    0% {
+        box-shadow: 20px 0 #000, -20px 0 #0002;
+        background: #000
+    }
+
+    33% {
+        box-shadow: 20px 0 #000, -20px 0 #0002;
+        background: #0002
+    }
+
+    66% {
+        box-shadow: 20px 0 #0002, -20px 0 #000;
+        background: #0002
+    }
+
+    100% {
+        box-shadow: 20px 0 #0002, -20px 0 #000;
+        background: #000
+    }
+}
+
+
+
+/*animation logo et loader*/
+.loader_content {
+    padding: 25px;
+    animation-name: play;
+    animation-duration: 5s;
+    visibility: hidden;
+}
+
+.loader_element {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 15px;
+}
+
+@keyframes play {
+    0% {
+        display: none;
+    }
+
+    100% {
+        visibility: visible;
+    }
+}
+
+
+
 /**Header**/
 
 .header {
@@ -218,6 +338,14 @@ a {
 
     }
 
+    &-content-column {
+        gap: 18px;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+
+    }
+
     &_card {
         cursor: pointer;
         width: 100%;
@@ -330,6 +458,8 @@ a {
     }
 }
 
+
+
 /** fin Footer **/
 
 /***********FIN**ACCUEIL**********/
@@ -374,37 +504,40 @@ a {
 /*image du restaurant la palette du gout*/
 .menu_container-img {
     background-image: url("../assets/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg");
-    background-size: contain;
-
-    ;
-
-    /*image du restaurant la note enchantée*/
-    &-1 {
-        background-image: url("../assets/images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg");
-        background-size: contain;
-
-    }
-
-    ;
-
-    /*image du restaurant A la française*/
-    &-2 {
-        background-image: url("../assets/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg");
-        background-size: contain;
-
-    }
-
-    ;
-
-    /*image du restaurant Le délice des sens*/
-    &-3 {
-        background-image: url("../assets/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg");
-        background-size: contain;
-
-    }
+    height: 275px;
+    background-size: cover;
+    width: 100%;
+    background-position: center;
 }
 
 
+/*image du restaurant la note enchantée*/
+.menu_container-img1 {
+    background-image: url("../assets/images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg");
+    height: 275px;
+    background-size: cover;
+    width: 100%;
+    background-position: center;
+}
+
+/*image du restaurant a la française*/
+
+.menu_container-img2 {
+    background-image: url("../assets/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg");
+    height: 275px;
+    background-size: cover;
+    width: 100%;
+    background-position: center;
+}
+
+/*image du restaurant le délice des sens*/
+.menu_container-img3 {
+    background-image: url("../assets/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg");
+    height: 275px;
+    background-size: cover;
+    width: 100%;
+    background-position: center;
+}
 
 /*Les boutons like*/
 .heart-container {
@@ -496,7 +629,8 @@ a {
     padding: 15px;
     padding-top: 32px;
     padding-bottom: 40px;
-    margin-top: 200px;
+    margin: auto;
+    margin-top: -50px;
     ;
 
     &-card {
@@ -608,6 +742,7 @@ a {
     justify-content: center;
     align-items: center;
     margin-right: -80px;
+    transition: 1s;
 
 }
 
@@ -616,10 +751,20 @@ a {
 }
 
 
-@media (min-width: 1440px) {
+@media (max-width: 1440px) {
 
     .main-container {
         max-width: 1440px;
+    }
+
+    .main-content {
+        max-width: 1440px;
+    }
+
+    /*header*/
+    .header_container {
+        gap: 572px;
+        padding-left: 10px;
     }
 
     .section_fonction-container {
@@ -633,7 +778,7 @@ a {
     }
 
     .section_restaurants {
-        padding: 30px 0;
+        padding: 30px 180px;
         align-items: center;
         box-sizing: border-box;
     }
@@ -642,15 +787,18 @@ a {
         display: flex;
         align-items: flex-start;
         width: 100%;
-        border: 2px solid greenyellow;
     }
 
     .section_restaurants-content-column {
-        display: flex;
-        width: 100%;
         gap: 100px;
+        flex-direction: row;
         justify-content: space-between;
         border: 2px solid palevioletred;
+    }
+
+    .menu_content {
+        width: 80%;
+        padding: 32px 10%;
     }
 
     /*footer*/
@@ -664,7 +812,7 @@ a {
         ;
 
         h2 {
-            margin-bottom: 0;
+            margin: 0;
         }
 
         ;
@@ -673,7 +821,8 @@ a {
             display: flex;
             justify-content: baseline;
             gap: 15px;
-            border: 2px solid red;
+            margin-right: 15px;
+
         }
 
         ;
@@ -681,5 +830,11 @@ a {
         li a {
             margin: 0;
         }
+    }
+
+    .footer_menu {
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
     }
 }
