@@ -29,7 +29,7 @@ body {
     max-width: 375px;
     margin: 0 auto;
     animation-name: forAnimation;
-    animation-duration: 8s;
+    animation-duration: 4s;
 }
 
 @keyframes forAnimation {
@@ -85,8 +85,7 @@ a {
     max-width: 375px;
     margin: 0 auto;
     width: 100%;
-    height: 100%;
-    animation-duration: 8s;
+    animation-duration: 4s;
     animation-name: loader_background;
 }
 
@@ -94,6 +93,8 @@ a {
 @keyframes loader_background {
     from {
         position: absolute;
+        width: 100%;
+        height: 100%;
         background: linear-gradient(var(--secondary-color) -11.44%, var(--main-color) 123.93%);
         opacity: 1;
     }
@@ -108,6 +109,8 @@ a {
     to {
         background: linear-gradient(var(--secondary-color) -11.44%, var(--main-color) 123.93%);
         opacity: 0;
+        width: 100%;
+        height: 100%;
         visibility: hidden;
     }
 }
@@ -153,7 +156,7 @@ a {
 .loader_content {
     padding: 25px;
     animation-name: play;
-    animation-duration: 5s;
+    animation-duration: 3s;
     visibility: hidden;
 }
 
@@ -668,6 +671,8 @@ a {
         display: flex;
         flex-direction: column;
         gap: 12px;
+        animation-name: opacityMenu;
+        animation-duration: 2s;
     }
 
     /*Plats*/
@@ -677,6 +682,8 @@ a {
         display: flex;
         flex-direction: column;
         gap: 12px;
+        animation-name: opacityMenu1;
+        animation-duration: 3s;
     }
 
     /*Desserts*/
@@ -686,6 +693,8 @@ a {
         display: flex;
         flex-direction: column;
         gap: 12px;
+        animation-name: opacityMenu2;
+        animation-duration: 4s;
 
     }
 
@@ -722,15 +731,68 @@ a {
     }
 }
 
+/*animation pages restaurants*/
+@keyframes opacityMenu {
+
+    0% {
+
+        opacity: 0;
+    }
+
+    10% {
+        color: var(--accent-color);
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes opacityMenu1 {
+
+    0% {
+        opacity: 0;
+    }
+
+    35% {
+        opacity: 0;
+    }
+
+    50% {
+        color: var(--accent-color);
+    }
 
 
-/*test*/
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes opacityMenu2 {
+
+    0% {
+
+        opacity: 0;
+    }
+
+    65% {
+        opacity: 0;
+    }
+
+    70% {
+        color: var(--accent-color);
+    }
+
+
+    100% {
+        opacity: 1;
+    }
+}
+
 .menu_content-card-title {
     overflow: hidden;
 }
 
-
-/*test*/
 
 /*Animations pour selectionner les plats*/
 .menu_animation {
