@@ -30,7 +30,7 @@ body {
   max-width: 375px;
   margin: 0 auto;
   animation-name: forAnimation;
-  animation-duration: 4s;
+  animation-duration: 3s;
 }
 
 @keyframes forAnimation {
@@ -81,7 +81,7 @@ a {
   max-width: 375px;
   margin: 0 auto;
   width: 100%;
-  animation-duration: 4s;
+  animation-duration: 3s;
   animation-name: loader_background;
 }
 
@@ -141,7 +141,7 @@ a {
 .loader_content {
   padding: 25px;
   animation-name: play;
-  animation-duration: 3s;
+  animation-duration: 2s;
   visibility: hidden;
 }
 
@@ -573,7 +573,7 @@ a {
   flex-direction: column;
   gap: 12px;
   animation-name: opacityMenu;
-  animation-duration: 2s;
+  animation-duration: 1s;
 }
 .menu_content-plats {
   width: 100%;
@@ -582,7 +582,7 @@ a {
   flex-direction: column;
   gap: 12px;
   animation-name: opacityMenu1;
-  animation-duration: 3s;
+  animation-duration: 2s;
 }
 .menu_content-desserts {
   width: 100%;
@@ -591,7 +591,7 @@ a {
   flex-direction: column;
   gap: 12px;
   animation-name: opacityMenu2;
-  animation-duration: 4s;
+  animation-duration: 3s;
 }
 .menu_content-name {
   overflow: hidden;
@@ -688,10 +688,20 @@ a {
   .main-content {
     max-width: 1440px;
   }
+  /*animation*/
+  .loader_container {
+    max-width: 1440px;
+  }
+  /**/
   /*header*/
   .header_container {
     gap: 572px;
     padding-left: 10px;
+  }
+  .menu_content-like {
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
   }
   .section_fonction-container {
     margin: 50px 180px;
@@ -715,7 +725,6 @@ a {
     gap: 100px;
     flex-direction: row;
     justify-content: space-between;
-    border: 2px solid palevioletred;
   }
   .menu_content {
     width: 80%;
@@ -730,6 +739,7 @@ a {
   }
   .footer_content h2 {
     margin: 0;
+    padding-right: 20px;
   }
   .footer_content ul {
     display: flex;
