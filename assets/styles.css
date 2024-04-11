@@ -20,14 +20,14 @@ body {
 }
 
 .main-container {
-  max-width: 375px;
+  max-width: 768px;
   margin: 0 auto;
   box-sizing: border-box;
   z-index: 1;
 }
 
 .main-content {
-  max-width: 375px;
+  max-width: 768px;
   margin: 0 auto;
   animation-name: forAnimation;
   animation-duration: 3s;
@@ -78,7 +78,7 @@ a {
 .loader_container {
   position: absolute;
   z-index: 2;
-  max-width: 375px;
+  max-width: 768px;
   margin: 0 auto;
   width: 100%;
   animation-duration: 3s;
@@ -681,16 +681,16 @@ a {
   margin-right: 0;
 }
 
-@media (max-width: 1440px) {
+@media (min-width: 1440px) {
   .main-container {
-    max-width: 1440px;
+    min-width: 1440px;
   }
   .main-content {
-    max-width: 1440px;
+    min-width: 1440px;
   }
   /*animation*/
   .loader_container {
-    max-width: 1440px;
+    min-width: 1440px;
   }
   /**/
   /*header*/
