@@ -19,17 +19,17 @@ body {
 }
 
 .main-container {
-    max-width: 768px;
+    min-width: 375px;
     margin: 0 auto;
     box-sizing: border-box;
     z-index: 1;
 }
 
 .main-content {
-    max-width: 768px;
+    min-width: 375px;
     margin: 0 auto;
     animation-name: forAnimation;
-    animation-duration: 3s;
+    animation-duration: 1ms;
 }
 
 @keyframes forAnimation {
@@ -82,7 +82,7 @@ a {
 .loader_container {
     position: absolute;
     z-index: 2;
-    max-width: 768px;
+    min-width: 375px;
     margin: 0 auto;
     width: 100%;
     animation-duration: 3s;
@@ -102,6 +102,8 @@ a {
     20% {
         position: absolute;
         background: linear-gradient(var(--secondary-color) -11.44%, var(--main-color) 123.93%);
+        width: 100%;
+        height: 100%;
         opacity: 1;
 
     }
@@ -813,25 +815,25 @@ a {
 }
 
 
-@media (min-width: 1440px) {
+@media (min-width: 768px) {
 
     .main-container {
-        min-width: 1440px;
+        min-width: 768px;
     }
 
     .main-content {
-        min-width: 1440px;
+        min-width: 768px;
     }
 
     /*animation*/
     .loader_container {
-        min-width: 1440px;
+        min-width: 768px;
     }
 
     /**/
     /*header*/
     .header_container {
-        gap: 572px;
+        gap: 1000px;
         padding-left: 10px;
     }
 
