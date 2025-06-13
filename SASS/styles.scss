@@ -367,6 +367,7 @@ a {
             object-fit: cover;
             height: 230px;
             border-radius: 15px 15px 0 0;
+            width: 100%;
         }
     }
 
@@ -494,10 +495,9 @@ a {
 /**Header**/
 .header_container {
     display: flex;
-    justify-self: baseline;
-    gap: 42px;
+    gap: 15%;
     height: 63px;
-    ;
+    padding-left: 10px;
 
     &-link {
         display: flex;
@@ -833,8 +833,8 @@ a {
     /**/
     /*header*/
     .header_container {
-        gap: 1000px;
-        padding-left: 10px;
+        gap: 35%;
+
     }
 
     .menu_content-like {
