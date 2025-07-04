@@ -197,10 +197,13 @@ a {
   padding-bottom: 15px;
 }
 .header_nav h1 {
+  margin-bottom: 0;
+  padding: 0 20%;
   font-size: 24px;
   font-weight: 700;
 }
 .header_nav p {
+  padding: 0 10%;
   font-size: 18px;
   font-style: normal;
   font-weight: 300;
@@ -254,10 +257,16 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.section_fonction-content-choice .store {
+  color: var(--main-color);
   padding-right: 20px;
 }
-.section_fonction-content-choice .fa-solid[name=fa-store] {
-  color: var(--main-color);
+.section_fonction-content-choice .list-ul {
+  padding-right: 25px;
+}
+.section_fonction-content-choice .mobile-screen {
+  padding: 0 28px 0 20px;
 }
 
 .rounded-container {
@@ -347,8 +356,7 @@ a {
   border: none;
   background-color: var(--accent-color);
   color: var(--green-font-color);
-  width: 80px;
-  height: 29px;
+  padding: 10px;
 }
 
 /*Les boutons like dans la partie restaurants*/
@@ -396,8 +404,21 @@ a {
 /***** PAGE RESTAURANTS  *****/
 /*Bouton pour retourner à la page d'accueil*/
 .header_container-link .btn_return {
-  border: none;
   background-color: white;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5em 1em;
+  color: white;
+  cursor: pointer;
+}
+.btn_return{
+  background-color: white;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5em 1em;
+  color: black;
   cursor: pointer;
 }
 .header_container-link .btn_return .fa-solid {
@@ -713,6 +734,7 @@ a {
     flex-direction: row;
     gap: 15px;
   }
+ 
   .section_restaurants {
     padding: 30px 180px;
     align-items: center;
@@ -745,7 +767,6 @@ a {
   }
   .footer_content ul {
     display: flex;
-    justify-content: baseline;
     gap: 15px;
     margin-right: 15px;
   }
